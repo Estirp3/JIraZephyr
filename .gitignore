@@ -1,0 +1,9 @@
+.target
+.idea
+.docx
+report
+datos
+Zephyr.iml
+.DS_Store
+test/java
+./.DS_Store
