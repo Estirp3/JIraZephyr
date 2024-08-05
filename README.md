@@ -49,4 +49,4 @@ archivo = en nombre del archivo con su extension
 ```
 ### Report cucumber
 
-_Se debe poder optener el reporte tipo json de cucumber desde la version 5.x.x
+_Se debe poder optener el reporte tipo json de cucumber desde la version 5.x.x_
