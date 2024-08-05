@@ -1,7 +1,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.bonigarcia/webdrivermanager.svg)]()
 [![Java](https://img.shields.io/badge/JavaJDK-v11.0-gren)]()
-[![gitlab](https://img.shields.io/badge/Git__Patricio_Calderon-GitLab-red)](https://gitlab.falabella.tech/pigcalderon)
-[![gitlab](https://img.shields.io/badge/Git__Josue_Baeza-GitLab-blue)](https://gitlab.falabella.tech/jibaezair)
+[![gitlab](https://img.shields.io/badge/Git__Patricio_Calderon-GitLab-red)](pigcalderon)
+
 
 
 ### Version - Actualizado 

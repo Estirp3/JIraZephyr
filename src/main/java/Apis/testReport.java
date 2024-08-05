@@ -1,21 +1,18 @@
-
 package Apis;
 
-import org.json.JSONArray;
-
-import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.io.IOException;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
+import org.json.JSONArray;
 
 public class testReport {
 
     //revisa el json del cucumber
     // ingresar ruta del reporte en propierties
     public static void reporte(String carpeta, String url, String username, String token, String KeyProyecto,
-                               String version, String ciclo, String nuevaCarpeta, String ruta, String nameArchivo) throws IOException {
+            String version, String ciclo, String nuevaCarpeta, String ruta, String nameArchivo) throws IOException {
         DateTimeFormatter fechaHrs = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
         LocalDateTime ahora = LocalDateTime.now();
 
@@ -93,21 +90,25 @@ public class testReport {
                         ListaErrorPaso[z] = errorPaso;
                     }
 
-                    /**Llamar caso de prueba con api **/
-
+                    /**
+                     * Llamar caso de prueba con api *
+                     */
                     if (nombreCaso.length() > 0) {
                         idCaso = apis.idCaso(url, keyCaso, username, token);
 
-                        /**api creacion ejecucion**/
+                        /**
+                         * api creacion ejecucion*
+                         */
                         idEjecucion = apis.crearEjecucion(url, idProyecto, idVersion, idCiclo, idCarpeta, idCaso, username, token);
                         creandoEvidencia.evidenciaWord(keyCaso, nombreCaso, ListaNombrePaso);
 
-
-                        /**se comprime reporte en archivo.zip**/
-                        File evidencia = new File("./Ev/Evidencia_"+keyCaso+".doc");
+                        /**
+                         * se comprime reporte en archivo.zip*
+                         */
+                        File evidencia = new File("./Ev/Evidencia_" + keyCaso + ".doc");
                         if (evidencia.exists()) {
-                            sa.agregarEvidencia(url, idEjecucion,keyCaso,username, token);
-                        }else{
+                            sa.agregarEvidencia(url, idEjecucion, keyCaso, username, token);
+                        } else {
                             System.out.println("No existe nada favor verificar ....");
                         }
 
@@ -121,6 +122,5 @@ public class testReport {
             }
         }
     }
-
 
 }
